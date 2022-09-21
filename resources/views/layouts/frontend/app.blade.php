@@ -61,7 +61,7 @@
     @yield('content')
 
     <!-- start footer Area -->
-    <footer style="height:80px;background-color:black;text-align:center">
+    <footer style="background-color:black;text-align:center">
       <div class="container">
       <div class="row">
           <p class="col-lg-8 col-sm-12 footer-text"  >

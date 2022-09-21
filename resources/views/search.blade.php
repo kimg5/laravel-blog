@@ -3,7 +3,7 @@
 
 <!-- Start top-section Area -->
 <!-- Start top-section Area -->
-<section class="top-section-area section-gap">
+<section class="top-section-area" style="padding-top:20px;padding-bottom:10px">
     <div class="container">
         <div class="row justify-content-center align-items-center d-flex">
             <div class="col-lg-8">

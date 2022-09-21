@@ -2,21 +2,20 @@
 @section('content')
 
 <!-- Start top-section Area -->
-<section class="top-section-area section-gap">
+<section class="top-section-area" style="padding-top:20px;padding-bottom:10px">
   <div class="container">
-    <div class="row justify-content-between align-items-center d-flex">
+    <div class="row align-items-center d-flex">
       <div class="col-lg-8 top-left">
-        <h1 class="text-white mb-20">All Post of Category 1</h1>
         <ul>
           <li>
-            <a href="index.html">Home</a
+            <a href="#">Home</a
             ><span class="lnr lnr-arrow-right"></span>
           </li>
           <li>
-            <a href="category.html">Category</a
+            <a href="#">Categories</a
             ><span class="lnr lnr-arrow-right"></span>
           </li>
-          <li><a href="single.html">Posts</a></li>
+          <li><a href="#">Posts</a></li>
         </ul>
       </div>
     </div>

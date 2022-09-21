@@ -1,16 +1,17 @@
 @extends('layouts.frontend.app')
 @section('content')
 <!-- Start banner Area -->
-<section class="generic-banner relative">
+<section class="top-section-area" style="padding-top:20px;padding-bottom:10px">
   <div class="container">
-    <div class="row height align-items-center justify-content-center">
-      <div class="col-lg-10">
-        <div class="generic-banner-content">
-          <h2 class="text-white text-center">The Category Page</h2>
-          <p class="text-white">
-            This page shows all the categories that available by the site
-          </p>
-        </div>
+    <div class="row align-items-center d-flex">
+      <div class="col-lg-8 top-left">
+        <ul>
+          <li>
+            <a href="#">Home</a
+            ><span class="lnr lnr-arrow-right"></span>
+          </li>
+          <li><a href="#">Categories</a></li>
+        </ul>
       </div>
     </div>
   </div>

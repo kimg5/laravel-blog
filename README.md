@@ -11,6 +11,6 @@ Run seed - php artisan db:seed
 run storage link - php artisan storage:link
 run the app - php artisan serve
 
-## License
-
-[MIT license](https://opensource.org/licenses/MIT).
+there are 2 users 
+admin@example.com / admin
+user@example.com / user

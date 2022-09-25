@@ -74,7 +74,7 @@
       </div>
     </div>
     <div class="container">
-      <div class="row d-flex justify-content-center">
+      <div class="row justify-content-center">
         @foreach ($posts as $post)
         <div class="single-posts col-lg-4 col-sm-4 mb-3">
           <img class="img-fluid" src="{{asset('storage/post/'.$post->image)}}" alt="{{$post->image}}" style="width:300px;height:150px">

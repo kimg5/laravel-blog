@@ -54,7 +54,7 @@
       @foreach ($posts as $post)
       <div class="item single-cat">
         <img src="{{asset('storage/post/'.$post->image)}}" alt="{{$post->image}}" style="width:300px;height:150px" />
-        <p class="date">{{$post->created_at->diffForHumans()}}</p>
+        <p class="date" style="width:180px">{{$post->created_at->diffForHumans()}}</p>
         <h4><a href="{{route('post', $post->slug)}}">{{$post->title}}</a></h4>
       </div>
       @endforeach
@@ -74,7 +74,7 @@
       </div>
     </div>
     <div class="container">
-      <div class="row justify-content-center">
+      <div class="row d-flex justify-content-center">
         @foreach ($posts as $post)
         <div class="single-posts col-lg-4 col-sm-4 mb-3">
           <img class="img-fluid" src="{{asset('storage/post/'.$post->image)}}" alt="{{$post->image}}" style="width:300px;height:150px">

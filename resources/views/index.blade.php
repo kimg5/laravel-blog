@@ -114,7 +114,7 @@
       <div class="col" style="width: 280px">
         <div class="card border-0 shadow-none">
           <div class="card-body d-flex align-items-center p-0">
-            <img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="130" height="130" src="frontend/img/team/kevin.png" />
+            <img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="130" height="130" src="frontend/img/team/kevin.jpg" />
             <div itemscope itemtype="https://schema.org/Person">
               <h6 class="fw-bold text-primary mb-0">
                 <span itemprop="name">

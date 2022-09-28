@@ -16,7 +16,7 @@
             <a href="category.html">Category</a
             ><span class="lnr lnr-arrow-right"></span>
           </li>
-          <li><a href="single.html">Fashion</a></li>
+          <li><a href="single.html">P</a></li>
         </ul>
       </div>
     </div>

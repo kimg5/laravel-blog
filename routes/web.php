@@ -37,7 +37,7 @@ Route::get('/tag/{name}', 'HomeController@tagPosts')->name('tag.posts');
 Route::post('/comment/{post}', 'CommentController@store')->name('comment.store')->middleware(['auth']);
 Route::post('/comment-reply/{comment}', 'CommentReplyController@store')->name('reply.store')->middleware(['auth']);
 Route::post('/like-post/{post}', 'HomeController@likePost')->name('post.like')->middleware(['auth', 'verified']);
-
+Route::get('/flights', 'FlightsController@index')->name('flights');
 
 // Admin ////////////////////////////////////////////////////////////////////////
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth', 'admin']], function () {
@@ -89,4 +89,5 @@ Route::get('/send', function(){
     */  
 
     return (new App\Mail\NewPost($post))->render();
+    
 });

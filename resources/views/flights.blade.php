@@ -16,7 +16,6 @@ echo $flight->payload;
 
 
 
-
 @endsection
 
 

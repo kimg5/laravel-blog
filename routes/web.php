@@ -38,6 +38,7 @@ Route::post('/comment/{post}', 'CommentController@store')->name('comment.store')
 Route::post('/comment-reply/{comment}', 'CommentReplyController@store')->name('reply.store')->middleware(['auth']);
 Route::post('/like-post/{post}', 'HomeController@likePost')->name('post.like')->middleware(['auth', 'verified']);
 Route::get('/flights', 'FlightsController@index')->name('flights');
+Route::get('/reports', 'ReportsController@index')->name('reports');
 
 // Admin ////////////////////////////////////////////////////////////////////////
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth', 'admin']], function () {

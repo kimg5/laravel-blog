@@ -10,14 +10,14 @@
         <h1 class="text-white mb-20">Report an Issue</h1>
         <ul>
           <li>
-            <a href="index.html">Home</a
-            ><span class="lnr lnr-arrow-right"></span>
+            <a href="/">Home</a
+            ><span class="lnr lnr-arrow-right"></span>TY
           </li>
           <li>
-            <a href="category">Category</a
+            <a href="/categories">Category</a
             ><span class="lnr lnr-arrow-right"></span>
           </li>
-          <li><a href="single.html">Reports</a></li>
+          <li><a href="/reports">Reports</a></li>
         </ul>
       </div>
     </div>
@@ -43,10 +43,10 @@
     Fill out this form if you find an issue. We appreciate the feedback!
     </div>
     <div class="card-body">
-      <form name="add-blog-post-form" id="add-blog-post-form" method="post" action="{{url('store-form')}}">
+      <form name="add-blog-post-form" id="add-blog-post-form" method="post" action="{{route('reports_store')}}">
        @csrf
        <div style="padding-bottom: 18px;">Reported by<span style="color: red;"> *</span><br/>
-        <input type="text" id="data_2" name="data_2" style="max-width : 450px;" class="form-control"/>
+        <input type="text" id="name" name="name" style="max-width : 450px;" class="form-control"/>
         </div>
         <div style="padding-bottom: 18px;">
         <label for="type" >Type</label>
@@ -67,18 +67,19 @@
         </div>
         <div style="padding-bottom: 18px;">Priority<br/>
         <select id="priority" name="priority" style="max-width : 300px;" class="form-control">
-        <option>Low</option>
-        <option>Medium</option>
-        <option>High</option>
+        <option value = "low">Low</option>
+        <option value="medium" >Medium</option>
+        <option value="high" >High</option>
         </select>
         </div>
         <div style="padding-bottom: 18px;">Summary<span style="color: red;"> *</span><br/>
-        <input type="text" id="summary" name="summary" style="max-width : 450px;" class="form-control"/>
+        <input required="" type="text" id="summary" name="summary" style="max-width : 450px;" class="form-control"/>
         </div>
         <div class="form-group">
           <label for="issue">Please describe Issue</label>
-          <textarea name="issue" class="form-control" required=""></textarea>
+          <textarea name="description" class="form-control" required=""></textarea>
         </div>
+        {{ csrf_field() }}
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
     </div>

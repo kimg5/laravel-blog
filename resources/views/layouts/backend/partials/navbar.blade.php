@@ -56,6 +56,11 @@
                         <i class="menu-icon fa fa-file"></i>Replied Comments
                     </a>
                 </li>
+                  <li class="active">
+                    <a href="{{route('admin.applications.index')}}">
+                        <i class="menu-icon fa fa-file"></i>Admin Applications
+                    </a>
+                </li>
             </ul>
             @else
             <ul class="nav navbar-nav">

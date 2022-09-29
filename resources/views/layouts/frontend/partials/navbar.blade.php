@@ -11,11 +11,11 @@
               <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
                 <ul class="navbar-nav scrollable-menu">
                     <li><a href="/">Home</a></li>
-                      <li><a href="/apply">Apply To Be An Admin</a></li>    
+                      <li><a href="/apply">Apply</a></li>    
                     <li><a href="/posts">Posts</a></li>
                     <li><a href="/categories">Categories</a></li>
-                    <li><a href="/#about">About</a></li>
-                    <li><a href="/about">About Page</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/reports_view">Report</a></li>
                     @if (Route::has('login'))
                     @auth
                         <!-- Dropdown -->

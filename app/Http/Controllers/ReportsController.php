@@ -31,7 +31,7 @@ class ReportsController extends Controller
         $report -> created_at =  $date;
         $report->save();
 
-        return view('reports');
+        return view('home');
 
     }
 }

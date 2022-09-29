@@ -11,13 +11,13 @@
         <ul>
           <li>
             <a href="/">Home</a
-            ><span class="lnr lnr-arrow-right"></span>TY
+            ><span class="lnr lnr-arrow-right"></span>
           </li>
           <li>
             <a href="/categories">Category</a
             ><span class="lnr lnr-arrow-right"></span>
           </li>
-          <li><a href="/reports">Reports</a></li>
+          <li><a href="/reports_view">Reports</a></li>
         </ul>
       </div>
     </div>

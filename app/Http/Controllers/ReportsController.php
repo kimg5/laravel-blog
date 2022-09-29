@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\report;
+use App\Post;
 
 use Illuminate\Support\Facades\DB;
 
@@ -31,7 +32,9 @@ class ReportsController extends Controller
         $report -> created_at =  $date;
         $report->save();
 
-        return view('home');
+        $posts = Post::latest()->take(6)->published()->get();
+        return view('index', compact('posts'));
+
 
     }
 }

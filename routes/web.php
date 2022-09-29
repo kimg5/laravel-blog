@@ -58,6 +58,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::get('/reply-comments', 'CommentReplyController@index')->name('reply-comment.index');
     Route::delete('/reply-comment/{id}', 'CommentReplyController@destroy')->name('reply-comment.destroy');
     Route::get('/post-liked-users/{post}', 'PostController@likedUsers')->name('post.like.users');
+    Route::resource('applications', 'ApplicationController');
 
 });
 

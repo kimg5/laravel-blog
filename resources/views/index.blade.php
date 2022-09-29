@@ -19,7 +19,7 @@
 
       <div class="head-bottom-meta d-flex justify-content-between align-items-end col-lg-12">
         <div class="col-lg-6 flex-row d-flex meta-left no-padding">
-          <a href="/login" class="genric-btn info circle arrow mr-md-auto">Visit Yotube <span class="lnr lnr-arrow-right"></span></a>
+          <a href="/login" class="genric-btn info circle arrow mr-md-auto">Visit YouTube <span class="lnr lnr-arrow-right"></span></a>
         </div>
         <div class="col-lg-6 flex-row d-flex meta-right no-padding justify-content-end">
           <div class="user-meta">

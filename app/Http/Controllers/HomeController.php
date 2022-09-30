@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Application;
 use App\Category;
 use App\Post;
 use App\Tag;
@@ -22,6 +23,28 @@ class HomeController extends Controller
         $posts = Post::latest()->take(6)->published()->get();
         return view('index', compact('posts'));
     }
+    public function apply()
+    {
+        return view('apply');
+    }
+    public function storeApp(Request $request)
+    {
+        $this->validate($request, [
+            'userInputName' => 'required|max:40|',
+            'userInputText' => 'required|max:256'
+        ]);
+        // Application::create(['name' => 'name', 'content' => 'content']);
+        $app = new Application();
+        $app->name = $request->userInputName;                  // Php Js Html
+        $app->content = $request->userInputText; // php-js-html 
+        $app->save();
+        return redirect()->back();
+    }
+    public function about()
+    {
+        return view('about');
+    }
+
     public function posts()
     {
         $posts = Post::latest()->published()->paginate(10);
@@ -32,12 +55,11 @@ class HomeController extends Controller
         $post = Post::where('slug', $slug)->published()->first();
         // $posts = Post::latest()->take(3)->published()->get();
         // Increase View count
-        $postKey = 'post_'.$post->id;
-        if(!Session::has($postKey)){
+        $postKey = 'post_' . $post->id;
+        if (!Session::has($postKey)) {
             $post->increment('view_count');
             Session::put($postKey, 1);
         }
-
         return view('post', compact('post'));
     }
     public function categories()
@@ -70,15 +92,16 @@ class HomeController extends Controller
 
         return view('tagPosts', compact('tags', 'query'));
     }
-    public function likePost($post){
+    public function likePost($post)
+    {
         // Check if user already liked the post or not
-        $user = Auth::user();
+        /*     $user = Auth::user();
         $likePost = $user->likedPosts()->where('post_id', $post)->count();
         if($likePost == 0){
             $user->likedPosts()->attach($post);
         } else{
             $user->likedPosts()->detach($post);
-        }
+        } */
         return redirect()->back();
     }
 }

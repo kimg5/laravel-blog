@@ -37,6 +37,11 @@ Route::get('/tag/{name}', 'HomeController@tagPosts')->name('tag.posts');
 Route::post('/comment/{post}', 'CommentController@store')->name('comment.store')->middleware(['auth']);
 Route::post('/comment-reply/{comment}', 'CommentReplyController@store')->name('reply.store')->middleware(['auth']);
 Route::post('/like-post/{post}', 'HomeController@likePost')->name('post.like')->middleware(['auth', 'verified']);
+Route::get('/reports_view', 'ReportsController@index')->name('reports_view');
+Route::post('/reports_store', 'ReportsController@store')->name('reports_store');
+Route::get('/apply', 'HomeController@apply');
+Route::post('/receiveApplication', 'HomeController@storeApp')->name('receiveApplication');
+Route::get('/about', 'HomeController@about');
 
 
 // Admin ////////////////////////////////////////////////////////////////////////
@@ -53,6 +58,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::get('/reply-comments', 'CommentReplyController@index')->name('reply-comment.index');
     Route::delete('/reply-comment/{id}', 'CommentReplyController@destroy')->name('reply-comment.destroy');
     Route::get('/post-liked-users/{post}', 'PostController@likedUsers')->name('post.like.users');
+    Route::resource('applications', 'ApplicationController');
 
 });
 
